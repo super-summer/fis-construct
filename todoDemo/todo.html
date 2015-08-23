@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> todo demo</title>
+	<meta charset="utf8">
+	<link rel="stylesheet" type="text/css" href="todo.css">
+	<script type="text/javascript"  src="vue.min.js" ></script>
+</head>
+<body>
+	<div id="demo">
+		<h1>{{title | uppercase}}</h1>
+		<ul>
+			<li
+				v-repeat="item in todos"
+				v-on="click: changeItem(item,this)"
+				class="{{item.done ? 'done' : ''}}"
+			>
+				{{item.content}}
+			</li>
+		</ul>    
+		<p>
+			<input type="text" id="item" v-model="item" v-on="keyup:addItem(item) | key 'enter'">
+			<input type="button" value="添加"  v-on="click:addItem(item)" />
+		</p>		
+	</div>
+<script type="text/javascript"  src="todo.js" ></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+body {
+    font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+li{cursor:pointer;margin-bottom:10px;font-weight:bold}
+li.done {
+    text-decoration: line-through;color:#cdcdcd
+}
